@@ -1,21 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import "./fonts.css";
-import "./styles.css";
+import './styles.css';
 
 export class App extends React.Component {
   constructor() {
     super();
-    this.places = [
-      "Autre chose que Picard...",
-      "A oja",
-      "Eat-salad",
-      "Une bonne brasserie",
-      "un truc exceptionnel"
-    ];
+    this.places = ['Pizzas', 'Sandwiches', 'Salads', 'Soup', 'Japanese food', 'Pastas'];
     this.state = {
-      selectedItem: null
+      selectedItem: null,
     };
     this.selectItem = this.selectItem.bind(this);
   }
@@ -23,7 +16,7 @@ export class App extends React.Component {
   selectItem() {
     if (this.state.selectedItem === null) {
       this.setState({
-        selectedItem: Math.floor(Math.random() * this.places.length)
+        selectedItem: Math.floor(Math.random() * this.places.length),
       });
     } else {
       this.setState({ selectedItem: null });
@@ -34,26 +27,18 @@ export class App extends React.Component {
   render() {
     const { selectedItem } = this.state;
     const wheelVars = {
-      "--nb-item": this.places.length,
-      "--selected-item": selectedItem
+      '--nb-item': this.places.length,
+      '--selected-item': selectedItem,
     };
-    const spinning = selectedItem !== null ? "spinning" : "";
+    const spinning = selectedItem !== null ? 'spinning' : '';
 
     return (
       <div className="App">
-        <h1>Où est-ce qu'on mange ?</h1>
+        <h1>What should you eat today?</h1>
         <div className="wheel-container">
-          <div
-            className={`wheel ${spinning}`}
-            style={wheelVars}
-            onClick={this.selectItem}
-          >
+          <div className={`wheel ${spinning}`} style={wheelVars} onClick={this.selectItem}>
             {this.places.map((place, index) => (
-              <div
-                className="wheel-item"
-                key={index}
-                style={{ "--item-nb": index }}
-              >
+              <div className="wheel-item" key={index} style={{ '--item-nb': index }}>
                 {place}
               </div>
             ))}
@@ -64,5 +49,5 @@ export class App extends React.Component {
   }
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);

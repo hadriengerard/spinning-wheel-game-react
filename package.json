@@ -1,7 +1,7 @@
 {
   "name": "spinning-wheel-game",
   "version": "1.0.0",
-  "description": "CSS Only (No SVG) Spinning Wheel  + React for the logic",
+  "description": "CSS Only (No SVG) Spinning Decision Wheel  + React for the logic",
   "keywords": ["game", "react", "spinning wheel", "css", "animation"],
   "main": "src/index.js",
   "dependencies": {
