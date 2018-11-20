@@ -1,8 +1,8 @@
 {
-  "name": "ouestcekonmange",
+  "name": "spinning-wheel-game",
   "version": "1.0.0",
-  "description": "Pour s'aider dans ce choix important !",
-  "keywords": [],
+  "description": "CSS Only (No SVG) Spinning Wheel  + React for the logic",
+  "keywords": ["game", "react", "spinning wheel", "css", "animation"],
   "main": "src/index.js",
   "dependencies": {
     "react": "16.5.2",
